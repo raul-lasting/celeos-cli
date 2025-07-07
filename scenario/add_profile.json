@@ -1,0 +1,123 @@
+{
+    "name": "profile_rfd_Oddddsdf",
+    "gui": "advanced",
+    "realtime-tle": false,
+    "channel_configs": [
+        {
+            "index": 0,
+            "input-config": {
+                "type": "rf",
+                "freq": 1000000000,
+                "rate": 10000000
+            },
+            "output-config": {
+                "type": "rf"
+            },
+            "model-config": {
+                "type": "satellite",
+                "orbit": {
+                    "type": "generic",
+                    "tle-data": "leo",
+                    "bent-pipe": true,
+                    "locations": [
+                        {
+                            "mobile": true,
+                            "start-lat": 45.760696,
+                            "start-lon": 21.226788,
+                            "finish-lat": 60,
+                            "finish-lon": 30,
+                            "speed": 200
+                        },
+                        {
+                            "mobile": true,
+                            "start-lat": 45.760696,
+                            "start-lon": 21.226788,
+                            "finish-lat": 60,
+                            "finish-lon": 30,
+                            "speed": 200
+                        }
+                    ]
+                },
+                "simulation-frequency": {
+                    "calc-freq-uplink": 1000000000,
+                    "calc-freq-downlink": 1000000000
+                },
+                "doppler-shift": {
+                    "enabled": [
+                        false,
+                        true
+                    ]
+                },
+                "variable-delay": {
+                    "enabled": [
+                        false,
+                        false
+                    ],
+                    "fixed-delay": 0.01
+                },
+                "path-attenuation": {
+                    "enabled": [
+                        true,
+                        true
+                    ]
+                },
+                "weather-effects": {
+                    "enabled": true,
+                    "weather": [
+                        [
+                            {
+                                "time": 0,
+                                "condition": "rainy"
+                            }
+                        ],
+                        [
+                            {
+                                "time": 0,
+                                "condition": "clear"
+                            }
+                        ]
+                    ]
+                },
+                "phase-noise": {
+                    "enabled": false,
+                    "phase-noise-powers": [
+                        0,
+                        0
+                    ]
+                },
+                "noise": {
+                    "enabled": true,
+                    "config": [
+                        {
+                            "power": -70
+                        },
+                        {
+                            "power": -70
+                        }
+                    ]
+                },
+                "interference": {
+                    "enabled": false,
+                    "config": [
+                        {
+                            "power": -70,
+                            "type": "5g"
+                        },
+                        {
+                            "power": -70,
+                            "type": "5g"
+                        }
+                    ]
+                },
+                "amplifier-nonlinearity": {
+                    "enabled": false,
+                    "amplifier-nonlinearity-type": "twta",
+                    "amplifier-power": -30
+                },
+                "doppler-spread": {
+                    "enabled": false
+                }
+            }
+        }
+    ]
+}

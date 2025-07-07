@@ -1,0 +1,32 @@
+[
+    {
+        "enable": true,
+        "channel": 0,
+        "attenuation": 3,
+        "dopplerShift": 1000000,
+        "delay": 0.01,
+        "los": true,
+        "noise": {
+            "enabled": false,
+            "config": [
+                {
+                    "power": -100
+                },
+                {
+                    "poert": -100
+                }
+            ]
+        },
+        "interference": {
+            "config": [
+                {
+                    "power": -45
+                },
+                {
+                    "power": -45
+                }
+            ]
+        }
+    }
+]
+
