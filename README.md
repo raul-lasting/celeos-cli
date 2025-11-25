@@ -82,7 +82,7 @@ $ python3 user/delete_user.py
 ### Activate License
 
 ```bash
-$ python3 License/license_activation.py
+$ python3 license/license_activation.py
 ```
 
 - Provide license key and user ID.
