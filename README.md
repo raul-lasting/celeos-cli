@@ -26,7 +26,7 @@ $ python3 IP_address/set_ip_add.py
 ### Set IP Address
 
 ```bash
-$ python3 set_ip_add.py
+$ python3 IP_address/set_ip_add.py
 ```
 
 - Enter the IP address where CELEOS was installed.
@@ -47,7 +47,7 @@ $ python3 user/add_user.py
 ### Show Users
 
 ```bash
-$ python3 user/show_user.py
+$ python3 user/show_users.py
 ```
 
 - Displays all registered users and returns a list with them.
