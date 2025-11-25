@@ -91,7 +91,7 @@ $ python3 license/license_activation.py
 ### Check License Status
 
 ```bash
-$ python3 License/license_status.py
+$ python3 license/license_status.py
 ```
 
 - Checks if the license is activated.
