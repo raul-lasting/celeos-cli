@@ -34,6 +34,21 @@ $ python3 IP_address/set_ip_add.py
 
 ---
 
+## Login
+
+### User Login
+
+```bash
+$ python3 login/login.py
+```
+
+- Enter username and password.
+- Returns an authentication token.
+
+> ⚠️ You must be logged in to use most of the following scripts.
+
+---
+
 ## User 
 
 ### Add User
@@ -59,21 +74,6 @@ $ python3 user/delete_user.py
 ```
 
 - Deletes the currently logged-in user.
-
----
-
-## Login
-
-### User Login
-
-```bash
-$ python3 login/login.py
-```
-
-- Enter username and password.
-- Returns an authentication token.
-
-> ⚠️ You must be logged in to use most of the following scripts.
 
 ---
 
