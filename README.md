@@ -209,10 +209,15 @@ $ python3 status/emulation_status.py
 
 Provides:
 
-- `get_status_log()`: Prints & returns output logs from the emulation.
-- `get_status_state()`: Indicates whether emulation is running.
-- `get_status_vars()`: Prints & returns emulator variables.
+- get_status_state() (default behavior)
+Indicates whether the emulation is running, stopped, loading, etc.
 
+- get_status_log() -> Prints and returns process output logs.
+(Disabled by default — uncomment in the script to enable.)
+
+- get_status_vars() -> Prints and returns runtime emulator variables.
+Only displays data when the emulator is in a running state.
+(Disabled by default — uncomment in the script to enable.)
 ---
 
 ### Display emulation logs
