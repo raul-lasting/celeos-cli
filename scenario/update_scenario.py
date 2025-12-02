@@ -26,6 +26,10 @@ def update_scenario(update_profile: json):
         response.raise_for_status()
     else:
         print("Profile has been updated.")
+    
+    if "new_name" in profile_py:
+        return profile_py["new_name"]
+
     return profile_py["name"]
     
     
