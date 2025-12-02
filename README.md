@@ -275,15 +275,8 @@ Includes:
 
 ### Delete SigMF Files
 
-> 🔒 Cannot delete full `.zip` archive—only `.sigmf-data` or `.sigmf-meta`.
-
-1. Set the file name in the API request (`delete_sigmf.py`):
-
-```bash
-{url}/sigmf/<sigmf_file>
-```
-
-Then run:
+- Select SigMF archive by name. Provide the base archive name (no extension).
+- ⚠️ Important: You can NOT delete a SigMF archive that is associated with a scenario/profile.
 
 ```bash
 $ python3 delete_sigmf.py
