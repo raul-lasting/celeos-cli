@@ -30,4 +30,4 @@ def update_scenario(update_profile: json):
     
     
 if __name__ == "__main__":
-    update_scenario_from_file("Profile/updated_profile.json")
+    update_scenario_from_file("scenario/updated_profile.json")

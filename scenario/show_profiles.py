@@ -19,6 +19,7 @@ def show_profiles():
     else:
         if not data_response.get("items"):
             print("There are no profiles for this user.")
+            sys.exit(0)
         else:
             for index, profiles in enumerate(data_response["items"], start = 1):
                 profile_name = profiles.get("name")
