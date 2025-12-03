@@ -237,7 +237,7 @@ $ python3 status/display_logs.py
 1. Add configurations in `runtime_params.json`.
 
 ```bash
-$ python3 add_runtime_params.py
+$ python3 runtime_params/add_runtime_params.py
 ```
 
 - Updates parameters while the emulation is running.
@@ -245,7 +245,7 @@ $ python3 add_runtime_params.py
 ### Delete Runtime Parameters
 
 ```bash
-$ python3 delete_runtime_params.py
+$ python3 runtime_params/delete_runtime_params.py
 ```
 
 - Reverts emulation to initial parameters.
@@ -259,7 +259,7 @@ $ python3 delete_runtime_params.py
 1. Set the path of the sigMF archive in `add_sigmf_archive.py` in `add_sigmf()` function from main.
 
 ```bash
-$ python3 add_sigmf_archive.py
+$ python3 sigmf/add_sigmf_archive.py
 ```
 
 - Adds the sigMF aigMF archive.
@@ -267,7 +267,7 @@ $ python3 add_sigmf_archive.py
 ### Show SigMF Files
 
 ```bash
-$ python3 show_sigmf_list.py
+$ python3 sigmf/show_sigmf_list.py
 ```
 
 Includes:
@@ -284,7 +284,7 @@ Includes:
 - ⚠️ Important: You can NOT delete a SigMF archive that is associated with a scenario/profile.
 
 ```bash
-$ python3 delete_sigmf.py
+$ python3 sigmf/delete_sigmf.py
 ```
 
 ---
