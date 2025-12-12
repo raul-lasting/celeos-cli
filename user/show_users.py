@@ -8,7 +8,7 @@ import global_params
 
 def show_users():
     
-    response = requests.get(f"{global_params.get_url()}/user/list", headers=global_params.get_header())
+    response = requests.get(f"{global_params.get_url()}/user/list", headers=global_params.get_user_hader())
     
     data_response = response.json()
     

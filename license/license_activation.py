@@ -5,6 +5,9 @@ import requests
 import json
 import global_params
 
+KEY_DIR = os.path.join(os.path.dirname(__file__), "License_keys")
+os.makedirs(KEY_DIR, exist_ok=True)
+
 
 def license_key_activation():
     
@@ -13,8 +16,8 @@ def license_key_activation():
     payload = json.dumps({
         "lic_key": lic_key
     })
-    
-    with open("License_keys/lic_key.txt", 'w') as f:
+
+    with open(os.path.join(KEY_DIR, "lic_key.txt"), 'w') as f:
         f.write(lic_key)
     
     response = requests.post(f"{global_params.get_url()}/license/key", headers=global_params.get_user_hader(), data=payload)
@@ -27,7 +30,7 @@ def license_key_activation():
         print(data_response.get("message") + ".")
     
     hw_id = data_response.get("hw_id")
-    with open("License_keys/hw_id.txt", 'w') as f:
+    with open(os.path.join(KEY_DIR, "hw_id.txt"), 'w') as f:
         f.write(hw_id)
 
 
@@ -35,10 +38,10 @@ def generate_hw_key():
     
     user_id = str(input("User ID: "))
     
-    with open("License_keys/hw_id.txt", 'r') as f:
+    with open(os.path.join(KEY_DIR, "hw_id.txt"), 'r') as f:
         hw_id = f.read()
     
-    with open("License_keys/lic_key.txt", 'r') as f:
+    with open(os.path.join(KEY_DIR, "lic_key.txt"), 'r') as f:
         lic_key = f.read()
 
     payload = json.dumps({
@@ -57,14 +60,14 @@ def generate_hw_key():
         print("Hardware key was generated.")
     
     hw_key = data_response.get("hw_key")
-    with open("License_keys/hw_key", 'w') as file:
+    with open(os.path.join(KEY_DIR, "hw_key"), 'w') as file:
         file.write(hw_key)
     
 
 
 def hardware_key_activation():
-    
-    with open("License_keys/hw_key", 'r') as f:
+
+    with open(os.path.join(KEY_DIR, "hw_key"), 'r') as f:
         hw_key = f.read()
     
     payload = json.dumps({

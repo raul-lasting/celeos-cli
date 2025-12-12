@@ -6,6 +6,13 @@
         "dopplerShift": 1000000,
         "delay": 0.01,
         "los": true,
+        "phase-noise": {
+            "enabled": false,
+            "phase-noise-powers": [
+                -15,
+                -30
+            ]
+        },
         "noise": {
             "enabled": false,
             "config": [
@@ -13,7 +20,7 @@
                     "power": -100
                 },
                 {
-                    "poert": -100
+                    "power": -100
                 }
             ]
         },
@@ -29,4 +36,3 @@
         }
     }
 ]
-

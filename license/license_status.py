@@ -8,7 +8,7 @@ import global_params
 
 def loaded_scenario():
     
-    response = requests.get(f"{global_params.get_url()}/license/status", headers=global_params.get_header())
+    response = requests.get(f"{global_params.get_url()}/license/status", headers=global_params.get_user_hader())
     
     data_response = response.json()
     

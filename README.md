@@ -26,39 +26,11 @@ $ python3 IP_address/set_ip_add.py
 ### Set IP Address
 
 ```bash
-$ python3 set_ip_add.py
+$ python3 IP_address/set_ip_add.py
 ```
 
 - Enter the IP address where CELEOS was installed.
 - You can also manually edit the URL file created after running this program.
-
----
-
-## User 
-
-### Add User
-
-```bash
-$ python3 user/add_user.py
-```
-
-- Provide requested credentials to create a new user.
-
-### Show Users
-
-```bash
-$ python3 user/show_user.py
-```
-
-- Displays all registered users and returns a list with them.
-
-### Delete User
-
-```bash
-$ python3 user/delete_user.py
-```
-
-- Deletes the currently logged-in user.
 
 ---
 
@@ -77,12 +49,40 @@ $ python3 login/login.py
 
 ---
 
+## User 
+
+### Add User
+
+```bash
+$ python3 user/add_user.py
+```
+
+- Provide requested credentials to create a new user.
+
+### Show Users
+
+```bash
+$ python3 user/show_users.py
+```
+
+- Displays all registered users and returns a list with them.
+
+### Delete User
+
+```bash
+$ python3 user/delete_user.py
+```
+
+- Deletes the currently logged-in user.
+
+---
+
 ## License
 
 ### Activate License
 
 ```bash
-$ python3 License/license_activation.py
+$ python3 license/license_activation.py
 ```
 
 - Provide license key and user ID.
@@ -91,7 +91,7 @@ $ python3 License/license_activation.py
 ### Check License Status
 
 ```bash
-$ python3 License/license_status.py
+$ python3 license/license_status.py
 ```
 
 - Checks if the license is activated.
@@ -209,10 +209,15 @@ $ python3 status/emulation_status.py
 
 Provides:
 
-- `get_status_log()`: Prints & returns output logs from the emulation.
-- `get_status_state()`: Indicates whether emulation is running.
-- `get_status_vars()`: Prints & returns emulator variables.
+- get_status_state() (default behavior)
+Indicates whether the emulation is running, stopped, loading, etc.
 
+- get_status_log() -> Prints and returns process output logs.
+(Disabled by default — uncomment in the script to enable.)
+
+- get_status_vars() -> Prints and returns runtime emulator variables.
+Only displays data when the emulator is in a running state.
+(Disabled by default — uncomment in the script to enable.)
 ---
 
 ### Display emulation logs
@@ -232,7 +237,7 @@ $ python3 status/display_logs.py
 1. Add configurations in `runtime_params.json`.
 
 ```bash
-$ python3 add_runtime_params.py
+$ python3 runtime_params/add_runtime_params.py
 ```
 
 - Updates parameters while the emulation is running.
@@ -240,7 +245,7 @@ $ python3 add_runtime_params.py
 ### Delete Runtime Parameters
 
 ```bash
-$ python3 delete_runtime_params.py
+$ python3 runtime_params/delete_runtime_params.py
 ```
 
 - Reverts emulation to initial parameters.
@@ -254,7 +259,7 @@ $ python3 delete_runtime_params.py
 1. Set the path of the sigMF archive in `add_sigmf_archive.py` in `add_sigmf()` function from main.
 
 ```bash
-$ python3 add_sigmf_archive.py
+$ python3 sigmf/add_sigmf_archive.py
 ```
 
 - Adds the sigMF aigMF archive.
@@ -262,7 +267,7 @@ $ python3 add_sigmf_archive.py
 ### Show SigMF Files
 
 ```bash
-$ python3 show_sigmf_list.py
+$ python3 sigmf/show_sigmf_list.py
 ```
 
 Includes:
@@ -279,7 +284,7 @@ Includes:
 - ⚠️ Important: You can NOT delete a SigMF archive that is associated with a scenario/profile.
 
 ```bash
-$ python3 delete_sigmf.py
+$ python3 sigmf/delete_sigmf.py
 ```
 
 ---

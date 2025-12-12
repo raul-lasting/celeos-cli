@@ -7,9 +7,9 @@ import getpass
 
 
 if __name__ == "__main__":
-    user = str(input("Username: "))
+    username = str(input("Username: "))
     name = str(input("Name: "))
     email = str(input("Email: "))
     password = getpass.getpass("Password: ")
-    credentials = user.add_user(user, name, email, password)
+    credentials = user.add_user(username, name, email, password)
     login.login_and_write_token(credentials["user"], credentials["pass"])

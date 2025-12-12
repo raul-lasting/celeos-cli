@@ -16,6 +16,8 @@ if __name__ == "__main__":
     start_time = time.time()
     timeout = 30
     profile_name = scenario.add_scenario_from_file("Examples/add_profile.json")
+    time.sleep(5)
+    print("The selected profile is ", profile_name)
     device.load_profile_as_string(profile_name)
     device.start_emulation()
     device.check_if_starts(start_time, timeout)

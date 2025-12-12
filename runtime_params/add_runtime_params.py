@@ -29,4 +29,4 @@ def add_runtime_params(runtime_params: json):
 
 
 if __name__ == '__main__':
-    add_runtime_params_from_file("Runtime_parameters/runtime_params.json")
+    add_runtime_params_from_file("runtime_params/runtime_params.json")

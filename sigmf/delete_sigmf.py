@@ -19,7 +19,9 @@ def delete_sigmf(file):
     
     if response.status_code != 200:
         print(f"Did not delete sigMF file. {data_response.get('message')}")
-        response.raise_for_status()
+        # response.raise_for_status()
+        return False
+
     else:
         print(data_response["message"])
     

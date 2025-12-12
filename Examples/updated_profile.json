@@ -1,5 +1,6 @@
 {
-    "name": "profile_s2ss",
+    "name": "profile_s2s",
+    "new_name": "profile_s2sy",
     "gui": "advanced",
     "realtime-tle": false,
     "channel_configs": [
